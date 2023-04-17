@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <a class="navbar-brand" href="#"><img class="card-img-top" src="data:image/png;base64,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" alt="Card image cap"></a>
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontakt</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Produkt
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">O nás</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Zadejte Email" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Přihlásit se</button>
+          </form>
+        </div>
+      </nav>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://d15-a.sdn.cz/d_15/c_img_E_J/Ocl5fF.jpeg?fl=cro,0,1,1275,717%7Cres,1200,,1%7Cjpg,80,,1" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://www.autoweb.cz/wp-content/uploads/2020/04/porsche_911_turbo_s_70.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://img.freepik.com/premium-photo/bangkok-thailand-08082022-lamborghini-luxury-super-car-fast-sports-premium-lighting-background-3d-illustration_67092-1599.jpg?w=2000" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="https://1884403144.rsc.cdn77.org/foto/bugatti-novemodely-premioveznacky-video-zeneva2016-sportovni/NjkweDQyNS9jZW50ZXIvbWlkZGxlL3NtYXJ0L2ZpbHRlcnM6cXVhbGl0eSg4NSkvaW1n/4715870.jpg?v=0&st=WtKhg5rs2WGFWzqep3psNcbhqmGTKHuFeLTLguXgj4o&ts=1600812000&e=0" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Bugatti Chiron</h5>
+            <p class="card-text">Mega zabavné auto na jízdu.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <button type="button" class="btn btn-outline-primary">Koupit</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://www.autoweb.cz/wp-content/uploads/2020/04/porsche_911_turbo_s_70.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Porsche 911 turbo S</h5>
+            <p class="card-text">Kvalita především.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <button type="button" class="btn btn-outline-primary">Koupit</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://img.freepik.com/premium-photo/bangkok-thailand-08082022-lamborghini-luxury-super-car-fast-sports-premium-lighting-background-3d-illustration_67092-1599.jpg?w=2000" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini Aventador</h5>
+            <p class="card-text">Klasika na každodenní jízdu.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <button type="button" class="btn btn-outline-primary">Koupit</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="https://cdn.motor1.com/images/mgl/VPBlK/s1/tesla-model-s.webp" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Tesla model S</h5>
+            <p class="card-text">Nejzajímavější auto od tohoto výrobce.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <button type="button" class="btn btn-outline-primary">Koupit</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://i.pinimg.com/originals/0c/b6/bc/0cb6bc7ab603e810ce6411f6316b8d0b.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Nissan Skyline GT-R r34</h5>
+            <p class="card-text">Toto auto patří Brian o connor.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <button type="button" class="btn btn-outline-primary">Koupit</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://www.autoweb.cz/wp-content/uploads/2019/04/ford_mustang_gt_fastback_104.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Ford Mustang GT</h5>
+            <p class="card-text"> Bumblebee, který nesmí chybět ve tvé garáži.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <button type="button" class="btn btn-outline-primary">Koupit</button>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
